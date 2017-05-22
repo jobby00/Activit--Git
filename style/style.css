@@ -1,0 +1,188 @@
+@charset "utf-8";
+/* CSS Document */
+
+                       /** fixation  de la police **/
+
+@font-face{ font-family:'Cuprum-Bold';
+			scr:url('Cuprum-Bold.eot');
+			src:url('Cuprum-Bold?iefix') format('embedded-opentype'),
+				url('Cuprum-Bold.woff') format('woff'),
+				url('Cuprum-Bold.ttf') format('truetype'),
+				url('Cuprum-Bold.svg') format('svg');}
+
+@font-face{ font-family:'Cuprum-BoldItalic';
+			scr:url('Cuprum-BoldItalic.eot');
+			src:url('Cuprum-BoldItalic?iefix') format('embedded-opentype'),
+				url('Cuprum-BoldItalic.woff') format('woff'),
+				url('Cuprum-BoldItalic.ttf') format('truetype'),
+				url('Cuprum-BoldItalic.svg') format('svg');}
+
+@font-face{ font-family:'Cuprum-Italic';
+			scr:url('Cuprum-Italic.eot');
+			src:url('Cuprum-Italic?iefix') format('embedded-opentype'),
+				url('Cuprum-Italic.woff') format('woff'),
+				url('Cuprum-Italic.ttf') format('truetype'),
+				url('Cuprum-Italic.svg') format('svg');}
+
+@font-face{ font-family:'Cuprum-Regular';
+			scr:url('Cuprum-Regular.eot');
+			src:url('Cuprum-Regular?iefix') format('embedded-opentype'),
+				url('Cuprum-Regular.woff') format('woff'),
+				url('Cuprum-Regular.ttf') format('truetype'),
+				url('Cuprum-Regular.svg') format('svg');}
+				
+				     /** LES BASES* */
+*			{margin:0; padding:0; border:0;}
+body 		{ margin:0; padding:0; font-family:'cuprum'; background:url(../img/nav.png) repeat-x  #f4f1f1; font-size: 13px; color: #585857; }
+h1 h2 h3 	{ margin:0; padding:0; }
+p 			{ text-align:justify; margin:0; padding:0; }
+
+                   /** --CLASS UTILES-- **/
+
+.clearfix:before,.clearfix:after {
+	content: '.';
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	font-size: 0;
+	line-height: 0;
+	width: 0;
+	height: 0
+}
+.clearfix:after{clear: both;}
+
+.left{float: left;}
+.right{float: right;}
+  
+                          /** LA STRUCTURE **/
+
+
+.contenaire{ width:1000px; height: auto; margin:10px auto 0 auto; overflow: auto;}
+.content{ margin: 0 10px; width: 980px; height: auto;}
+.content .left a.logo{ display:block; background:url(../img/logo.gif) no-repeat; width:210px; height:210px; padding-right:20px;
+					   text-indent:-9999px; margin-top: 0px;}
+.content h2.left{ font-family:'Cuprum-Italic'; font-size:24px; margin:20px 15px 25px 0; color:#383737;}
+.content .left form{ margin:19px 0px 0px 0;}
+.content .left #Newsletter input[type=text]{ font-family:'Cuprum-BoldItalic'; font-size:15px; width:200px; height:29px;
+											 background:#f1f1f1; border:1px solid #929191;  color:#a8a6a6; margin: 0; border-radius: 5px;}
+.content .left #Newsletter input[type=text]:focus{ border:2px solid #5c5a5a; color:#464444;}
+.content .left #Newsletter input[type=submit]{ margin:0px 0 0 0px; background:#787878; cursor: pointer; width:50px;
+ 											   height:27px; border:2px solid #868484; border-radius:5px;
+ 											   font-family:'Cuprum-BoldItalic'; font-size:16px; color:#f1f1f1;}
+.content .left #Newsletter input[type=submit]:hover{ border:2px solid #5c5a5a; color:#464444; background: #a09d9d;}
+
+                            /** RESEAUX SOCIEAUX **/
+
+.content div.right a.icone 				{ display: inline-block; width: 63px; height:59px;}
+#facebook 								{ background: url(../img/rsociaux.png)  no-repeat 0 0; }
+#facebook:hover 						{ background-position: 0px bottom;}
+#twitter  								{ background: url(../img/rsociaux.png) no-repeat  -63px 0; }
+#twitter:hover 							{ background-position: -63px bottom;}
+#rss									{ background: url(../img/rsociaux.png)  no-repeat -125px 0; }
+#rss:hover 								{ background-position: -125px bottom;}
+
+                            /**BARE DE NAVIGATION **/
+
+#navbar					{ width:210px; height:auto; margin:25px 20px 0 0; padding:0;}
+#navbar	ul li   		{ font-family:'cuprum'; text-align:center; font-size:26px; text-transform:uppercase; padding-bottom:0;}					    
+#navbar	ul li a			{ color:#454242; display:block;}
+#navbar	ul li a:hover	{ width:210px; height:32px; background:#726e6c ; font-family:'Cuprum-Regular'; color:#fff;} 
+#navbar	ul li a:.active { width:210px; height:32px; background:#726e6c ; font-family:'Cuprum-Regular'; color:#fff;}
+#navbar	ul li:hover ul 	{ height: 196px;}
+#navbar	ul li ul        { margin: 0; height: 0px; overflow: hidden; transition:1s; -moz-transition:1s; -webkit-transition:1s;}
+#navbar	ul li ul a 		{ background: #eae2e2; text-transform: capitalize;}
+#navbar	ul li ul a:hover{ color: #9a7331;background: #eadada;font-family:'cuprum-bold';}
+#navbar	ul li ul a:hover{ color: #9a7331;background: #eadada;font-family:'cuprum-bold';}
+
+							/** FOOTER PIED DE LA PAGE **/
+
+#pied					{ background:#cccbcb;  margin: 0; padding: 0; font-family:'cuprum'; font-size: 13px; color: #585857; height:79px;
+						  border-top: 1px solid #dcd8d8; }
+#piedfoot				{ width:1000px; height: auto; margin:0px auto 0 auto; overflow: auto;}		  
+#footer  				{ margin:0 10px; width: 980px;}						  							
+#foot .left				{ width: 610px; height: 67px; margin: 0; padding: 0;}
+#foot .left h2			{ font-family:'cuprum-bold'; font-size: 13px;  margin: 10px 0 0 0; text-align: center; }
+#camp a.cdj 			{ width:44px; height:47px; display: inline-block;}
+#camp a 			    { background: url(../img/camp-de-jeunesse.gif) no-repeat; width:44px; height:46px; display:block; margin-top:-16px;   }
+#camp a:hover			{ background-position: -0px bottom ;}
+#foot div.right    		{ margin-top: -30px;}
+#foot div.right h3 a.copy  			{color: #10190f;}
+#foot div.right h3 a:hover 			{color: #ffa000;}
+#foot div.right  h3 a#concep 		{color: #3d4c99;}
+#foot div.right  h3 a#concep:hover  {color: #ffa000;}
+                 
+                            /** SLIDERS **/
+
+#slider  				{margin-top:-146px; width: 750px; height: 400px;}                            
+
+/** LES COMMENTAIRE **/
+
+ 
+
+.right .commentaire 	{margin-top: 10px; width: 750px; height:auto; font-family:'Cuprum-Italic';}
+.right .commentaire h3 	{text-align: center; color: #21201f; font-size: 24px; margin: 0;}
+.right .commentaire p 	{font-size: 15px; color: #585857; margin-bottom: 10px;}
+
+							/** ACTUALITE ACCUEIL **/
+
+.left .actu     				{width:210px; height:auto; margin:0px 20px 0 0; padding:0; color: #585857; }
+.left .actu ul 					{margin-top: 5px;}
+.left .actu ul li.date  		{font-family:'Cuprum-Italic'; font-size: 12px;}
+.left .actu ul li.titre 		{font-family:'Cuprum-Italic'; font-size: 14px;}
+.left .actu p.actu 	    		{font-family:'Cuprum-Italic'; font-size: 10px; margin:5px 0 0 0; }
+.left .actu span a.actu 		{font-family:'Cuprum-Italic'; font-size: 12px; text-transform: uppercase; color: #ffa000;}
+.left .actu span a.actu:hover   {color: #585857;}
+         					
+         					/** PETIT SLIDER **/
+
+.right #slide2 					{width: 750px; height: 158px; margin: -139px 0 0 0; padding: 0;}
+
+/** A PROPOS **/
+
+.right #apropo  				{ width: 750px; height: auto; font-family:'Cuprum-Italic';}
+.right #apropo h3 				{ font-size: 18px; color: #3D3C3C; text-align: center; text-transform: uppercase; margin: 10px 0 0 0;}
+.right #apropo p.right 			{ font-size: 13px; color: #585857; margin-bottom: 5px;}
+
+							/** ACTUALITE **/
+
+.actualite 						{ width: 750px; height: auto; margin: 0; padding: 0; float: right;}
+.right .articles   				{ width: 540px; height: auto; margin: 26px 0 0 0; font-family:'Cuprum-Italic'; }
+.right .articles ul li.date 	{ font-family:'Cuprum-Italic'; font-size: 14px; color:#585857;}
+.right .articles ul li a.titre 	{ font-family:'Cuprum-BoldItalic'; font-size: 14px; color: #3D3C3C; text-transform: uppercase;}
+.right .articles ul li.hauteur  { font-family:'Cuprum-Bold'; font-size: 13px; text-transform: uppercase; color: #9a9999;}
+.right .articles p     			{ font-size: 12px; color: #585857; margin: 5px 0 0 0; padding: 0;}
+
+.left .actu 					{ margin:20px 10px 0 0;  width: 199px; height: auto;}
+.left .actu  ul 				{ margin-bottom: 20px;}
+.left .actu  ul li.date 		{ font-family:'Cuprum-Italic'; font-size: 14px; color:#585857; text-align: center; background: #cecece; width: 200px; height: 20px; padding-top: 5px;}
+.left .actu  ul li a.titre 		{ font-family:'Cuprum-Bold'; font-size: 14px; color: #3D3C3C; text-transform: uppercase; display: block;}
+.left .actu  ul li.hauteur 		{ font-family:'Cuprum-Bold'; font-size: 13px; text-transform: uppercase; color: #9a9999;}
+.left .actu  ul li a.titre:hover{ color: #ffa000;}
+
+							/** SOLICARE **/
+
+.right .commentaire h4.soli     { margin: 10px 0 5px 0; font-size: 15px; color: #3a3939; }
+.right .commentaire p.soli 		{ font-family: 'cuprum'; font-weight: normal; font-size: 13px; font-style:normal;}
+.right .commentaire span.soli 	{ font-size: 14px; color: #3a3939;}
+
+							/** ADHERER **/
+
+.right .commentaire p.adher 		{ font-family: 'cuprum'; font-weight: normal; font-size: 13px; font-style:normal;}
+.right .commentaire form.adher{ margin:19px 0px 0px 0;}
+.right .commentaire .adher input[type=text]{ font-family:'Cuprum-BoldItalic'; font-size:15px; width:200px; height:29px;
+											 background:#f1f1f1; border:1px solid #929191;  color:#a8a6a6; margin: 0; border-radius: 5px;}
+.right .commentaire .adher input[type=text]:focus{ border:2px solid #5c5a5a; color:#464444;}
+.right .commentaire .adher input[type=submit]{ margin:0px 0 0 0px; background:#787878; cursor: pointer; width:50px;
+ 											   height:27px; border:2px solid #868484; border-radius:5px;
+ 											   font-family:'Cuprum-BoldItalic'; font-size:16px; color:#f1f1f1;}
+.right .commentaire .adherr input[type=submit]:hover{ border:2px solid #5c5a5a; color:#464444; background: #a09d9d;}
+
+
+
+
+
+
+
+
+
+
